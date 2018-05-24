@@ -7,36 +7,33 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 
 ### Tables
 
-+ ○ => true
-+ associationはER図に記載しました
-
 #### users
 
-| Column          |  Type  | Index | Null | Unique |
-|:----------------|:------:|:-----:|:----:|:------:|
-| name            | string |   ○   |  -   |   ○    |
-| email           | string |   -   |  -   |   ○    |
-| password_digest | string |   -   |  -   |   -    |
+| Column          |  Type  | Index | Null  | Unique |
+|:----------------|:------:|:-----:|:-----:|:------:|
+| name            | string | true  | false |  true  |
+| email           | string | false | false |  true  |
+| password_digest | string | false | false | false  |
 
 #### groups
 
-| Column |  Type  | Index | Null | Unique |
-|:-------|:------:|:-----:|:----:|:------:|
-| name   | string |   -   |  -   |   -    |
+| Column |  Type  | Index | Null  | Unique |
+|:-------|:------:|:-----:|:-----:|:------:|
+| name   | string | false | false | false  |
 
 #### users_groups
 
-| column |    Type    | Index | Null | Unique | foreign_key |
-|:-------|:----------:|:-----:|:----:|:------:|:-----------:|
-| group  | references |   ○   |  -   |   -    |      ○      |
-| user   | references |   ○   |  -   |   -    |      ○      |
+| column |    Type    | Index | Null  | Unique | foreign_key |
+|:-------|:----------:|:-----:|:-----:|:------:|:-----------:|
+| group  | references | true  | false | false  |    true     |
+| user   | references | true  | false | false  |    true     |
 
 #### messages
 
 
-| column    |    Type    | Index | Null | Unique | foreign_key |
-|:----------|:----------:|:-----:|:----:|:------:|:-----------:|
-| text      |   string   |   -   |  ○   |   -    |      -      |
-| image_url |   string   |   -   |  ○   |   -    |      -      |
-| user      | references |   ○   |  -   |   -    |      ○      |
-| group     | references |   ○   |  -   |   -    |      ○      |
+| column    |    Type    | Index | Null  | Unique | foreign_key |
+|:----------|:----------:|:-----:|:-----:|:------:|:-----------:|
+| text      |   string   | false | true  | false  |    false    |
+| image_url |   string   | false | true  | false  |    false    |
+| user      | references | true  | false | false  |    true     |
+| group     | references | true  | false | false  |    true     |
