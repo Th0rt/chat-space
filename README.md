@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DB設計
 
-Things you may want to cover:
+### ER図
+https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 
-* Ruby version
+### Tables
 
-* System dependencies
++ ○ => true
++ associationはER図に記載しました
 
-* Configuration
+#### users
 
-* Database creation
+| Column | Type | Index | Null | Unique |
+|-|:-:|:-:|:-:|:-:|
+| name | string | ○ | - | ○ |
+| email | string | - | - | ○ |
+|password_digest | string | - | - | ○ |
 
-* Database initialization
+#### chatgroups
 
-* How to run the test suite
+| Column | Type | Index | Null | Unique |
+|-|:-:|:-:|:-:|:-:|
+| id | integer | ○ | - | ○ |
+| name | string | - | - | - |
 
-* Services (job queues, cache servers, search engines, etc.)
+#### users-chatgroups
 
-* Deployment instructions
+| column | Type | Index | Null | Unique |
+|-|:-:|:-:|:-:|:-:|
+| id | integer | ○ | - | ○ |
+| chatgroups_id | references | ○ | - | - |
+| user_id | references | ○ | - | - |
 
-* ...
+#### messages
+
+
+| column | Type | Index | Null | Unique |
+|-|:-:|:-:|:-:|:-:|
+| id | integer | ○ | - | ○ |
+| text | string | - | ○ | - |
+| image_url | string | - | ○ | - |
+| user_id | references | ○ | - | - |
+| group_id | references | ○ | - | - |
