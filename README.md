@@ -18,8 +18,8 @@ columns
 | password_digest | string | false | false | false  |
 
 associations
-* has_many :groups, through: :groups_users
 * has_many :groups_users
+* has_many :groups, through: :groups_users
 * has_many :messages
 
 #### groups
@@ -31,9 +31,9 @@ columns
 | name   | string | false | false | false  |
 
 associations
-* has_many :messages
-* has_many :users, through: :groups_users
 * has_many :groups_users
+* has_many :users, through: :groups_users
+* has_many :messages
 
 #### groups_users
 
