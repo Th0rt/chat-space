@@ -1,24 +1,64 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DB設計
 
-Things you may want to cover:
+### ER図
+https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 
-* Ruby version
+### Tables
 
-* System dependencies
+#### users
 
-* Configuration
+columns
 
-* Database creation
+| Column          |  Type  | Index | Null  | Unique |
+|:----------------|:------:|:-----:|:-----:|:------:|
+| name            | string | true  | false |  true  |
+| email           | string | false | false |  true  |
+| password_digest | string | false | false | false  |
 
-* Database initialization
+associations
+* has_many :groups_users
+* has_many :groups, through: :groups_users
+* has_many :messages
 
-* How to run the test suite
+#### groups
 
-* Services (job queues, cache servers, search engines, etc.)
+columns
 
-* Deployment instructions
+| Column |  Type  | Index | Null  | Unique |
+|:-------|:------:|:-----:|:-----:|:------:|
+| name   | string | false | false | false  |
 
-* ...
+associations
+* has_many :groups_users
+* has_many :users, through: :groups_users
+* has_many :messages
+
+#### groups_users
+
+columns
+
+| column |    Type    | Index | Null  | Unique | foreign_key |
+|:-------|:----------:|:-----:|:-----:|:------:|:-----------:|
+| group  | references | true  | false | false  |    true     |
+| user   | references | true  | false | false  |    true     |
+
+associations
+* belongs_to :group
+* belongs_to :user
+
+#### messages
+
+columns
+
+| column |    Type    | Index | Null  | Unique | foreign_key |
+|:-------|:----------:|:-----:|:-----:|:------:|:-----------:|
+| text   |   string   | false | true  | false  |    false    |
+| image  |   string   | false | true  | false  |    false    |
+| user   | references | true  | false | false  |    true     |
+| group  | references | true  | false | false  |    true     |
+
+associations
+* belongs_to :group
+* belongs_to :user
