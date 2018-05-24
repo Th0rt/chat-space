@@ -12,34 +12,34 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 
 #### users
 
-| Column | Type | Index | Null | Unique |
-|-|:-:|:-:|:-:|:-:|
-| name | string | ○ | - | ○ |
-| email | string | - | - | ○ |
-|password_digest | string | - | - | ○ |
+| Column          |  Type  | Index | Null | Unique |
+|:----------------|:------:|:-----:|:----:|:------:|
+| name            | string |   ○   |  -   |   ○    |
+| email           | string |   -   |  -   |   ○    |
+| password_digest | string |   -   |  -   |   ○    |
 
 #### chatgroups
 
-| Column | Type | Index | Null | Unique |
-|-|:-:|:-:|:-:|:-:|
-| id | integer | ○ | - | ○ |
-| name | string | - | - | - |
+| Column |  Type   | Index | Null | Unique |
+|:-------|:-------:|:-----:|:----:|:------:|
+| id     | integer |   ○   |  -   |   ○    |
+| name   | string  |   -   |  -   |   -    |
 
 #### users-chatgroups
 
-| column | Type | Index | Null | Unique |
-|-|:-:|:-:|:-:|:-:|
-| id | integer | ○ | - | ○ |
-| chatgroups_id | references | ○ | - | - |
-| user_id | references | ○ | - | - |
+| column        |    Type    | Index | Null | Unique |
+|:--------------|:----------:|:-----:|:----:|:------:|
+| id            |  integer   |   ○   |  -   |   ○    |
+| chatgroups_id | references |   ○   |  -   |   -    |
+| user_id       | references |   ○   |  -   |   -    |
 
 #### messages
 
 
-| column | Type | Index | Null | Unique |
-|-|:-:|:-:|:-:|:-:|
-| id | integer | ○ | - | ○ |
-| text | string | - | ○ | - |
-| image_url | string | - | ○ | - |
-| user_id | references | ○ | - | - |
-| group_id | references | ○ | - | - |
+| column    |    Type    | Index | Null | Unique |
+|:----------|:----------:|:-----:|:----:|:------:|
+| id        |  integer   |   ○   |  -   |   ○    |
+| text      |   string   |   -   |  ○   |   -    |
+| image_url |   string   |   -   |  ○   |   -    |
+| user_id   | references |   ○   |  -   |   -    |
+| group_id  | references |   ○   |  -   |   -    |
