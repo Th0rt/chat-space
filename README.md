@@ -45,8 +45,8 @@ columns
 | user   | references | true  | false | false  |    true     |
 
 associations
-* belongs_to :groups
-* belongs_to :users
+* belongs_to :group
+* belongs_to :user
 
 #### messages
 
@@ -60,5 +60,5 @@ columns
 | group  | references | true  | false | false  |    true     |
 
 associations
-* belongs_to :groups
-* belongs_to :users
+* belongs_to :group
+* belongs_to :user
