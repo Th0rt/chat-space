@@ -18,13 +18,13 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 | email           | string |   -   |  -   |   ○    |
 | password_digest | string |   -   |  -   |   -    |
 
-#### chatgroups
+#### groups
 
 | Column |  Type  | Index | Null | Unique |
 |:-------|:------:|:-----:|:----:|:------:|
 | name   | string |   -   |  -   |   -    |
 
-#### users-chatgroups
+#### users-groups
 
 | column        |    Type    | Index | Null | Unique |
 |:--------------|:----------:|:-----:|:----:|:------:|
