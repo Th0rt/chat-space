@@ -16,7 +16,7 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 |:----------------|:------:|:-----:|:----:|:------:|
 | name            | string |   ○   |  -   |   ○    |
 | email           | string |   -   |  -   |   ○    |
-| password_digest | string |   -   |  -   |   ○    |
+| password_digest | string |   -   |  -   |   -    |
 
 #### chatgroups
 
