@@ -52,12 +52,12 @@ associations
 
 columns
 
-| column    |    Type    | Index | Null  | Unique | foreign_key |
-|:----------|:----------:|:-----:|:-----:|:------:|:-----------:|
-| text      |   string   | false | true  | false  |    false    |
-| image_url |   string   | false | true  | false  |    false    |
-| user      | references | true  | false | false  |    true     |
-| group     | references | true  | false | false  |    true     |
+| column |    Type    | Index | Null  | Unique | foreign_key |
+|:-------|:----------:|:-----:|:-----:|:------:|:-----------:|
+| text   |   string   | false | true  | false  |    false    |
+| image  |   string   | false | true  | false  |    false    |
+| user   | references | true  | false | false  |    true     |
+| group  | references | true  | false | false  |    true     |
 
 associations
 * belongs_to :groups
