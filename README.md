@@ -24,7 +24,7 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 |:-------|:------:|:-----:|:----:|:------:|
 | name   | string |   -   |  -   |   -    |
 
-#### users-groups
+#### users_groups
 
 | column |    Type    | Index | Null | Unique | foreign_key |
 |:-------|:----------:|:-----:|:----:|:------:|:-----------:|
