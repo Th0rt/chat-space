@@ -26,17 +26,17 @@ https://cacoo.com/diagrams/SNaLLbUetd5x3vLR
 
 #### users-groups
 
-| column        |    Type    | Index | Null | Unique |
-|:--------------|:----------:|:-----:|:----:|:------:|
-| chatgroups_id | references |   ○   |  -   |   -    |
-| user_id       | references |   ○   |  -   |   -    |
+| column |    Type    | Index | Null | Unique | foreign_key |
+|:-------|:----------:|:-----:|:----:|:------:|:-----------:|
+| group  | references |   ○   |  -   |   -    |      ○      |
+| user   | references |   ○   |  -   |   -    |      ○      |
 
 #### messages
 
 
-| column    |    Type    | Index | Null | Unique |
-|:----------|:----------:|:-----:|:----:|:------:|
-| text      |   string   |   -   |  ○   |   -    |
-| image_url |   string   |   -   |  ○   |   -    |
-| user_id   | references |   ○   |  -   |   -    |
-| group_id  | references |   ○   |  -   |   -    |
+| column    |    Type    | Index | Null | Unique | foreign_key |
+|:----------|:----------:|:-----:|:----:|:------:|:-----------:|
+| text      |   string   |   -   |  ○   |   -    |      -      |
+| image_url |   string   |   -   |  ○   |   -    |      -      |
+| user      | references |   ○   |  -   |   -    |      ○      |
+| group     | references |   ○   |  -   |   -    |      ○      |
