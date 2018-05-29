@@ -4,7 +4,7 @@
 .comment-form {
   position: relative;
 
-  * {
+  > * {
     border-style: none;
     height: 50px;
     vertical-align: middle;
