@@ -1,0 +1,29 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.main-header {
+  @include main-padding(0, 0);
+  @include clearfix;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  height: 15%;
+}
+
+.main-header__group-name {
+  float: left;
+  font-size: 20px;
+  padding: 35px 0 15px;
+}
+
+.main-header__edit-btn {
+  float: right;
+  font-size: 15px;
+  height: 40px;
+  margin: 40px 0 0;
+  padding: 0 20px;
+}
+
+.main-header__group-menbers {
+  clear: both;
+  font-size: 12px;
+}

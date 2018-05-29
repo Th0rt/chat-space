@@ -1,0 +1,10 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.alert {
+  width: 100vw;
+}
+
+.alert__message {
+  text-align: center;
+}

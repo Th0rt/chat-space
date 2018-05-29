@@ -1,0 +1,29 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.comment-form {
+  position: relative;
+
+  * {
+    border-style: none;
+    height: 50px;
+    vertical-align: middle;
+   }
+}
+
+.comment-form__message {
+  padding: 0 10px;
+  width: calc(100% - 115px);
+}
+
+.comment-form__btn-insert-image-file {
+  position: absolute;
+  right: 115px;
+  width: 50px;
+}
+
+.comment-form__btn-submit {
+  float: right;
+  font-size: 20px;
+  width: 100px;
+}

@@ -1,0 +1,15 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin sidebar-padding ($top, $bottom) {
+  padding: $top 20px $bottom;
+}
+
+@mixin main-padding ($top, $bottom) {
+  padding: $top 40px $bottom;
+}
