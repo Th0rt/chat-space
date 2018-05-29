@@ -1,0 +1,22 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.sidebar-menu {
+  @include sidebar-padding(35px, 15px);
+  height: 15%;
+  width: 100%;
+}
+
+.sidebar-menu__user-name {
+  float: left;
+  font-size: 16px;
+}
+
+.sidebar-menu__new-group {
+  float: right;
+}
+
+.sidebar-menu__edit-user {
+  float: right;
+  font-size: 16px;
+}

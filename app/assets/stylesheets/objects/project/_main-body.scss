@@ -1,0 +1,8 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.main-body {
+  height: calc(100vh - 15% - 90px);
+  overflow-y: scroll;
+  padding: 46px 40px 0;
+}

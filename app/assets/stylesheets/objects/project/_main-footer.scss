@@ -1,0 +1,11 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+
+.main-footer {
+  @include main-padding(20px, 20px);
+  bottom: 0;
+  height: 90px;
+  position: absolute;
+  width: calc(100vw - 300px);
+}
