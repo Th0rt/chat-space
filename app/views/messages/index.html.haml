@@ -5,8 +5,10 @@
   .sidebar
     .sidebar-menu
       %p.sidebar-menu__user-name user_name
-      %p.sidebar-menu__new-group □
-      %p.sidebar-menu__edit-user □
+      %a.sidebar-menu__new-group{href: ''}
+        = fa_icon('cog lg')
+      %a.sidebar-menu__edit-user{href: ''}
+        = fa_icon('edit lg')
     .sidebar-group-list
       .sidebar-group
         .sidebar-group__name
@@ -96,6 +98,7 @@
     .main-footer
       %form.comment-form
         %input.comment-form__message{ placeholder: 'type a message'}
-        %button.comment-form__btn-insert-image-file □
+        %button.comment-form__btn-insert-image-file
+          = fa_icon('image lg')
         %button.comment-form__btn-submit
           submit
