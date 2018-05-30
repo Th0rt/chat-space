@@ -1,13 +1,12 @@
-.alert
-  %p.alert__message alert message
 .wrapper
 
   .sidebar
     .sidebar-menu
-      %p.sidebar-menu__user-name user_name
+      %h3.sidebar-menu__user-name
+        = current_user.name
       %a.sidebar-menu__new-group{href: ''}
         = fa_icon('cog lg')
-      %a.sidebar-menu__edit-user{href: ''}
+      = link_to edit_user_path(current_user), class: "sidebar-menu__edit-user" do
         = fa_icon('edit lg')
     .sidebar-group-list
       .sidebar-group
