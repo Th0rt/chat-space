@@ -4,7 +4,7 @@
     .sidebar-menu
       %h3.sidebar-menu__user-name
         = current_user.name
-      %a.sidebar-menu__new-group{href: ''}
+      = link_to new_group_path, class: 'sidebar-menu__new-group' do
         = fa_icon('cog lg')
       = link_to edit_user_path(current_user), class: "sidebar-menu__edit-user" do
         = fa_icon('edit lg')
