@@ -1,0 +1,22 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.message {
+  padding: 0 0 40px;
+}
+
+.message__author-name {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.message__time {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.message__text {
+  font-size: 14px;
+}

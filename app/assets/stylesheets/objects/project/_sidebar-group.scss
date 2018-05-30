@@ -1,0 +1,15 @@
+@import '../utility/variable';
+@import '../utility/mixin';
+
+.sidebar-group {
+  @include sidebar-padding(20px, 20px);
+}
+
+.sidebar-group__name {
+  font-size: 15px;
+  padding: 0 0 5px;
+}
+
+.sidebar-group__last-message {
+  font-size: 12px;
+}

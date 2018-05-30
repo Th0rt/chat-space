@@ -1,0 +1,42 @@
+$colors-background: (
+  alert: #38aef0,
+  sidebar-menu: #253141,
+  sidebar-group-list: #2f3e51,
+  main-header__edit-btn: #fff,
+  main-footer: #aaa,
+  comment-form__btn-submit: #38aef0,
+);
+
+$colors-font: (
+  alert__message: #fff,
+  sidebar: #fff,
+  main-header__group-menbers: #999,
+  main-header__edit-btn: #38aef0,
+  message__author-name: #434a54,
+  message__time: #999,
+  message__text: #434a54,
+  comment-form__btn-submit: #fff,
+);
+
+$colors-border: (
+  main-header: #eee,
+  main-header__edit-btn: #38aef0,
+);
+
+@each $class, $color in $colors-background {
+  .#{$class} {
+    background-color: $color;
+  }
+}
+
+@each $class, $color in $colors-font {
+  .#{$class} {
+    color: $color;
+  }
+}
+
+@each $class, $color in $colors-border {
+  .#{$class} {
+    border-color: $color;
+  }
+}

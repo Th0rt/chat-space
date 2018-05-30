@@ -1,2 +1,104 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.alert
+  %p.alert__message alert message
+.wrapper
+
+  .sidebar
+    .sidebar-menu
+      %p.sidebar-menu__user-name user_name
+      %a.sidebar-menu__new-group{href: ''}
+        = fa_icon('cog lg')
+      %a.sidebar-menu__edit-user{href: ''}
+        = fa_icon('edit lg')
+    .sidebar-group-list
+      .sidebar-group
+        .sidebar-group__name
+          %p group_name
+        .sidebar-group__last-message
+          %p group_message
+      .sidebar-group
+        .sidebar-group__name
+          %p group_name2
+        .sidebar-group__last-message
+          %p group_message2
+
+  .main
+    .main-header
+      .main-header__group-name
+        %p group_name
+      %button.main-header__edit-btn
+        edit
+      .main-header__group-menbers
+        %p user1 user2
+    .main-body
+      .main-body__message-list.messages-list
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+        .message
+          .message__author-name
+            %p user_name
+          .message__time
+            %p 0000/00/00 00:00
+          .message__text
+            %p message_text
+          .message__image
+    .main-footer
+      %form.comment-form
+        %input.comment-form__message{ placeholder: 'type a message'}
+        %button.comment-form__btn-insert-image-file
+          = fa_icon('image lg')
+        %button.comment-form__btn-submit
+          submit
