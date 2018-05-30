@@ -1,5 +1,6 @@
 $colors-background: (
-  alert: #38aef0,
+  flash__message--notice: #38aef0,
+  flash__message--alert: red,
   sidebar-menu: #253141,
   sidebar-group-list: #2f3e51,
   main-header__edit-btn: #fff,
@@ -8,7 +9,8 @@ $colors-background: (
 );
 
 $colors-font: (
-  alert__message: #fff,
+  flash__message--notice: #fff,
+  flash__message--alert: #fff,
   sidebar: #fff,
   main-header__group-menbers: #999,
   main-header__edit-btn: #38aef0,
