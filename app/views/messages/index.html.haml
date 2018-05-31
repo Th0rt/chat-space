@@ -30,70 +30,8 @@
         %p user1 user2
     .main-body
       .main-body__message-list.messages-list
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
-        .message
-          .message__author-name
-            %p user_name
-          .message__time
-            %p 0000/00/00 00:00
-          .message__text
-            %p message_text
-          .message__image
+        - @messages.each do |message|
+          = render partial: 'message', locals: { message: message }
     .main-footer
       = form_for [@group, @message], html: { class: 'comment-form' } do |f|
         = f.text_field :text, placeholder: 'type a message', class: 'comment-form__message'
