@@ -7,7 +7,7 @@
     .main-header
       %p.main-header__group-name
         = @group.name
-      = button_to 'edit', edit_group_path(@group), value: 'edit', class: 'main-header__edit-btn'
+      = button_to 'edit', edit_group_path(@group), method: :get, value: 'edit', class: 'main-header__edit-btn'
       %p.main-header__group-menbers
         MEMBER&nbsp;:&nbsp;
         - @group.users.each do |user|
