@@ -95,9 +95,10 @@
             %p message_text
           .message__image
     .main-footer
-      %form.comment-form
-        %input.comment-form__message{ placeholder: 'type a message'}
-        %button.comment-form__btn-insert-image-file
-          = fa_icon('image lg')
+      = form_for [@group, @message], html: { class: 'comment-form' } do |f|
+        = f.text_field :text, placeholder: 'type a message', class: 'comment-form__message'
+        = f.label :image, class: 'comment-form__btn-insert-image-file' do
+          = fa_icon('image lg', class: 'comment-form__btn-insert-image-file--icon')
+          = f.file_field :image, class: 'comment-form__btn-insert-image-file--hidden'
         %button.comment-form__btn-submit
           submit
