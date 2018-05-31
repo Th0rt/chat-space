@@ -1,0 +1,9 @@
+.message
+  .message__author-name
+    %p.message__author-name
+      = message.user.name
+    %p.message__time
+      = message.created_at
+    %p.message__text
+      = message.text
+    = image_tag(message.image, class: '.message__image')

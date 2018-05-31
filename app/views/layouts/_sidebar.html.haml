@@ -2,14 +2,14 @@
   .sidebar-menu
     %h3.sidebar-menu__user-name
       = current_user.name
-    = link_to new_group_path, class: 'sidebar-menu__new-group' do
-      = fa_icon('cog lg')
     = link_to edit_user_path(current_user), class: "sidebar-menu__edit-user" do
+      = fa_icon('cog lg')
+    = link_to new_group_path, class: 'sidebar-menu__new-group' do
       = fa_icon('edit lg')
   .sidebar-group-list
     - @groups.each do | group |
       .sidebar-group
         %p.sidebar-group__name
-          #{group.name}
+          = group.name
         %p.sidebar-group__last-message
-          #{group.messages.last}
+          = group.show_last_message
