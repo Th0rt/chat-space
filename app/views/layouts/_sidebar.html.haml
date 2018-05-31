@@ -10,6 +10,6 @@
     - @groups.each do | group |
       .sidebar-group
         %p.sidebar-group__name
-          #{group.name}
+          = group.name
         %p.sidebar-group__last-message
-          #{group.messages.last}
+          = group.show_last_message

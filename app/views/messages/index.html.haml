@@ -1,37 +1,23 @@
 .wrapper
 
-  .sidebar
-    .sidebar-menu
-      %h3.sidebar-menu__user-name
-        = current_user.name
-      = link_to new_group_path, class: 'sidebar-menu__new-group' do
-        = fa_icon('cog lg')
-      = link_to edit_user_path(current_user), class: "sidebar-menu__edit-user" do
-        = fa_icon('edit lg')
-    .sidebar-group-list
-      .sidebar-group
-        .sidebar-group__name
-          %p group_name
-        .sidebar-group__last-message
-          %p group_message
-      .sidebar-group
-        .sidebar-group__name
-          %p group_name2
-        .sidebar-group__last-message
-          %p group_message2
+  = render 'layouts/sidebar'
 
   .main
+
     .main-header
-      .main-header__group-name
-        %p group_name
-      %button.main-header__edit-btn
-        edit
-      .main-header__group-menbers
-        %p user1 user2
+      %p.main-header__group-name
+        = @group.name
+      = button_to 'edit', edit_group_path(@group), value: 'edit', class: 'main-header__edit-btn'
+      %p.main-header__group-menbers
+        MEMBER&nbsp;:&nbsp;
+        - @group.users.each do |user|
+          #{user.name}&nbsp;
+
     .main-body
       .main-body__message-list.messages-list
         - @messages.each do |message|
           = render partial: 'message', locals: { message: message }
+
     .main-footer
       = form_for [@group, @message], html: { class: 'comment-form' } do |f|
         = f.text_field :text, placeholder: 'type a message', class: 'comment-form__message'
