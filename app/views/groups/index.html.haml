@@ -1,25 +1,5 @@
 .wrapper
-
-  .sidebar
-    .sidebar-menu
-      %h3.sidebar-menu__user-name
-        = current_user.name
-      = link_to new_group_path, class: 'sidebar-menu__new-group' do
-        = fa_icon('cog lg')
-      = link_to edit_user_path(current_user), class: "sidebar-menu__edit-user" do
-        = fa_icon('edit lg')
-    .sidebar-group-list
-      .sidebar-group
-        .sidebar-group__name
-          %p group_name
-        .sidebar-group__last-message
-          %p group_message
-      .sidebar-group
-        .sidebar-group__name
-          %p group_name2
-        .sidebar-group__last-message
-          %p group_message2
-
+  = render 'layouts/sidebar'
   .main
     .main-header
       .main-header__group-name
