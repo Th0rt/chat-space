@@ -41,6 +41,7 @@ $(function() {
     })
     .done(function(data) {
       append_message(data);
+      $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
       console.log("error");
