@@ -39,8 +39,6 @@ $(function() {
       processData: false,
       contentType: false
     })
-    .done(function() {
-      console.log("success");
     .done(function(data) {
       append_message(data);
     })
