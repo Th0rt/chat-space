@@ -1,5 +1,16 @@
 $(function() {
 
+  function append_alert(message) {
+
+    var html = `<div class="flash">
+                  <div class="flash__message flash__message--alert">
+                    ${ message }
+                  </div>
+                </div>`
+
+    $('.wrapper').prepend(html)
+  }
+
   function append_message(message) {
 
     var html = `<div class="message">
@@ -44,7 +55,7 @@ $(function() {
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
-      console.log("error");
+      append_alert('メッセージの送信に失敗しました')
     })
 
 
