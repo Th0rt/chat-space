@@ -9,7 +9,7 @@ $(function() {
 
     var html = `<div class="message">
                   <div class="message__author-name">
-                    ${ message.user.name }
+                    ${ message.user_name }
                   </div>
                   <div class="message__time">
                     ${ message.created_at }
@@ -24,8 +24,8 @@ $(function() {
   }
 
   function append_image(message) {
-    if (message.image.url) {
-      var html = `<img src="${message.image.url}" class="message__image">`
+    if (message.image_url) {
+      var html = `<img src="${message.image_url}" class="message__image">`
       $('.message:last').append(html);
     }
   }
@@ -45,7 +45,7 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      append_message(data);
+      append_message(data.message);
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
       append_flash('メッセージの送信に成功しました', 'notice')
       $('#form')[0].reset();
