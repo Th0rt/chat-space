@@ -9,7 +9,7 @@ $(function() {
     $('#flash').html(html)
   }
 
-   $(function auto_update(){
+  $(function auto_update(){
     setInterval(update, 5000);
   })
 
