@@ -13,7 +13,7 @@ $(function() {
 
     var image_html = (message.image_url)? `<img src="${message.image_url}" class="message__image">` : ""
 
-    var html = `<div class="message">
+    var html = `<div class="message" data-id="${ message.id }">
                   <div class="message__author-name">
                     ${ message.user_name }
                   </div>
