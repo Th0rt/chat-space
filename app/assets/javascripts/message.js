@@ -7,6 +7,8 @@ $(function() {
 
   function append_message(message) {
 
+    var image_html = (message.image_url)? `<img src="${message.image_url}" class="message__image">` : ""
+
     var html = `<div class="message">
                   <div class="message__author-name">
                     ${ message.user_name }
@@ -17,17 +19,10 @@ $(function() {
                   <div class="message__text">
                     ${ message.text }
                   </div>
+                  ${ image_html }
                 </div>`
 
     $('.messages-list').append(html);
-    append_image(message)
-  }
-
-  function append_image(message) {
-    if (message.image_url) {
-      var html = `<img src="${message.image_url}" class="message__image">`
-      $('.message:last').append(html);
-    }
   }
 
   $('#form').on('submit', function(e) {
