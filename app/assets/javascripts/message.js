@@ -58,7 +58,5 @@ $(function() {
     .fail(function() {
       append_alert('メッセージの送信に失敗しました', 'alert')
     })
-
-
   })
 })
