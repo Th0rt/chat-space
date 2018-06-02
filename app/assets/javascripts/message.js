@@ -1,5 +1,9 @@
 $(function() {
 
+  function scroll_bottom(element) {
+    element.animate({scrollTop: element[0].scrollHeight}, 'fast');
+  }
+
   function append_flash(message, type) {
     var html = `<div class="flash__message flash__message--${ type }"> ${ message } </div>`
     $('#flash').html(html)
@@ -41,7 +45,7 @@ $(function() {
     })
     .done(function(data) {
       append_message(data.message);
-      $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
+      scroll_bottom($('.main-body'));
       append_flash('メッセージの送信に成功しました', 'notice')
       $('#form')[0].reset();
     })
