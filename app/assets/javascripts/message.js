@@ -54,6 +54,7 @@ $(function() {
       append_message(data);
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
       append_alert('メッセージの送信に成功しました', 'notice')
+      $('#form')[0].reset();
     })
     .fail(function() {
       append_alert('メッセージの送信に失敗しました', 'alert')
