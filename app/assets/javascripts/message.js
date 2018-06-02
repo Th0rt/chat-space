@@ -24,7 +24,7 @@ $(function() {
     })
     .done(function(data) {
       if(data.new_message) {
-        $.each(data.new_message,function(i, message) { append_message(message) });
+        $.each(data.new_message, function(i, message) { append_message(message) });
         scroll_bottom($('.main-body'));
       }
     })
