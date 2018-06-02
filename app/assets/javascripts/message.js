@@ -1,9 +1,9 @@
 $(function() {
 
-  function append_alert(message) {
+  function append_alert(message, type) {
 
     var html = `<div class="flash">
-                  <div class="flash__message flash__message--alert">
+                  <div class="flash__message flash__message--${type}">
                     ${ message }
                   </div>
                 </div>`
@@ -53,9 +53,10 @@ $(function() {
     .done(function(data) {
       append_message(data);
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
+      append_alert('メッセージの送信に成功しました', 'notice')
     })
     .fail(function() {
-      append_alert('メッセージの送信に失敗しました')
+      append_alert('メッセージの送信に失敗しました', 'alert')
     })
 
 
