@@ -14,7 +14,7 @@ $(function() {
   })
 
   function update(){
-    var last_message_id = $('.message:last').data('id')
+    var last_message_id = $('.message')[0] ? $('.message:last').data('id') : 0
 
     $.ajax({
       url: location.href,
