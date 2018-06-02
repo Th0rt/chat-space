@@ -36,7 +36,7 @@ $(function() {
     }
   }
 
-  $('.comment-form').on('submit', function(e) {
+  $('#form').on('submit', function(e) {
     e.preventDefault();
 
     var fd = new FormData(this);
