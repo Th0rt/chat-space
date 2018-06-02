@@ -1,14 +1,8 @@
 $(function() {
 
-  function append_alert(message, type) {
-
-    var html = `<div class="flash">
-                  <div class="flash__message flash__message--${type}">
-                    ${ message }
-                  </div>
-                </div>`
-
-    $('.wrapper').prepend(html)
+  function append_flash(message, type) {
+    var html = `<div class="flash__message flash__message--${ type }"> ${ message } </div>`
+    $('#flash').html(html)
   }
 
   function append_message(message) {
@@ -53,11 +47,11 @@ $(function() {
     .done(function(data) {
       append_message(data);
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
-      append_alert('メッセージの送信に成功しました', 'notice')
+      append_flash('メッセージの送信に成功しました', 'notice')
       $('#form')[0].reset();
     })
     .fail(function() {
-      append_alert('メッセージの送信に失敗しました', 'alert')
+      append_flash('メッセージの送信に失敗しました', 'alert')
     })
   })
 })
