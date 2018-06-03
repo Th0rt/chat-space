@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
     @groups = current_user.groups
     @messages = @group.messages.includes(@user)
     @message = Message.new
+
+    respond_to do |format|
+      format.html
+      format.json { @new_message = Message.where('id > ?', auto_update_params[:last_message_id]) }
+    end
   end
 
   def create
@@ -21,6 +26,10 @@ class MessagesController < ApplicationController
   end
 
   private
+
+  def auto_update_params
+    params.permit(:last_message_id)
+  end
 
   def message_params
     params.require(:message).permit(:text, :image).merge(user_id: current_user.id)
