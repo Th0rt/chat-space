@@ -1,5 +1,4 @@
 if @new_message.present?
-
   json.new_message do
     json.array! @new_message do |message|
       json.id         message.id
@@ -9,5 +8,4 @@ if @new_message.present?
       json.created_at message.created_at
     end
   end
-
 end
