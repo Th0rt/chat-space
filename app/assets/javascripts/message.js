@@ -23,7 +23,7 @@ $(function() {
       data: { last_message_id: last_message_id }
     })
     .done(function(data) {
-      if(data.new_message) {
+      if(data.new_message.length) {
         $.each(data.new_message, function(i, message) { append_message(message) });
         scroll_bottom($('.main-body'));
       }
