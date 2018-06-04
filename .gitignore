@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+config/secrets.yml
 public/uploads
 
 # Ignore Byebug command history file.
