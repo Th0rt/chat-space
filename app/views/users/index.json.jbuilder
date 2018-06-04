@@ -1,9 +1,11 @@
 json.users do
-  json.array! @user do |user|
+  json.array! @users do |user|
     json.id   user.id
     json.name user.name
-    json.array! user.groups do |group|
-      json.id group.id
+    json.groups do
+      json.array! user.groups do |group|
+        json.id group.id
+      end
     end
   end
 end
