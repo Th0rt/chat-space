@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     respond_to do |format|
       format.html
-      format.json { @users = User.all }
+      format.json { @users = User.where('name like ?', "%" + search_params + "%") }
     end
   end
 
@@ -22,5 +22,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email)
+  end
+
+  def search_params
+    params.require(:keyword)
   end
 end
