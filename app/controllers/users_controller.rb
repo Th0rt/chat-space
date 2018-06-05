@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.where('name like ? and id != ?', "%#{search_params}%", current_user.id)
     respond_to do |format|
       format.html
-      format.json { @users = User.where('name like ?', "%" + search_params + "%") }
+      format.json { @users }
     end
   end
 
