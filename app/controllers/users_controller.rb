@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @users = User.where('name like ? and id != ?', "%#{search_params}%", current_user.id)
     respond_to do |format|
       format.html
-      format.json { @users }
+      format.json
     end
   end
 
