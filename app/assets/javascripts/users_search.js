@@ -46,8 +46,6 @@ $(function() {
         data:  { keyword: input }
       })
       .done(function(data) {
-        console.log("success");
-        console.log(data);
         if (data.users.length) {
           $.each(data.users, function(index, user) { append_html_add_member($('#user-search-result'), user) });
         } else {
