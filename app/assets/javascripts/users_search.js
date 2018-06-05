@@ -31,12 +31,12 @@ $(function() {
   // 描画HTMLの定義ここまで
 
   // ユーザー追加のインクリメンタルサーチ
-  var old = ""
+  var preInput = ""
 
   $('#user-search-field').on("keyup", function(e) {
     var input = $("#user-search-field").val();
 
-    if (input != old) {
+    if (input != preInput) {
       $('#user-search-result').empty();
 
       $.ajax({
@@ -56,7 +56,7 @@ $(function() {
         append_html_error($('user-search-result'), "通信エラーが発生しました")
       })
 
-      old = input
+      preInput = input
     }
   })
 
