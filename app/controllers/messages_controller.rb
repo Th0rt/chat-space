@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { @new_message = Message.where('id > ?', auto_update_params[:last_message_id]) }
+      format.json { @new_message = @group.messages.where('id > ?', auto_update_params[:last_message_id]) }
     end
   end
 
