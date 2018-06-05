@@ -47,7 +47,7 @@ $(function() {
       })
       .done(function(data) {
         if (data.users.length) {
-          $.each(data.users, function(index, user) { append_html_add_member($('#user-search-result'), user) });
+          data.users.forEach(function(user) { append_html_add_member($('#user-search-result'), user) });
         } else {
           append_html_error($('#user-search-result'), "一致するユーザーがいません")
         }
