@@ -53,7 +53,7 @@ $(function() {
         }
       })
       .fail(function() {
-        append_html_error($('user-search-result'), "通信エラーが発生しました")
+        append_html_error($('#user-search-result'), "通信エラーが発生しました")
       })
       preInput = input
     }
