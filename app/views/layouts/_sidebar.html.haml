@@ -8,7 +8,7 @@
       = fa_icon('edit lg')
   .sidebar-group-list
     - @groups.each do | group |
-      .sidebar-group
+      = link_to group_messages_path(group), class: 'sidebar-group' do
         %p.sidebar-group__name
           = group.name
         %p.sidebar-group__last-message
